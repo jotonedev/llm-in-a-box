@@ -1,0 +1,25 @@
+[project]
+name = "llm-in-a-box"
+version = "0.1.0"
+description = "Interact with an LLM using a microphone, always listening"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=2.7.2",
+    "playsound3>=3.3.0",
+    "pyaudio>=0.2.14",
+    "sounddevice>=0.5.3",
+    "speechrecognition[openai]>=3.14.3",
+    "ollama>=0.6.1"
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.0",
+    "ruff>=0.14.4",
+    "ty>=0.0.1a26",
+]
+
+[ruff.tool]
+line-length = 90
+exclude = ["__pycache__", "build", "dist", ".venv"]
